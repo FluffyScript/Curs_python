@@ -22,7 +22,7 @@
 from random import randint
 from timeit import default_timer as timer
 
-
+print("Otilia a fost aici")
 def insertionSort(sir):
     lungime_sir = len(sir)  # Get the length of the array
      
