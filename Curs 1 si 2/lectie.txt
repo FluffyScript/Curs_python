@@ -1,0 +1,243 @@
+# Ce este o instructiune?
+# Este orice linie de cod mai putin linii goale sau comentarii. 
+# (Declarare de variabile, structuri de control)
+
+
+
+# Variabile:
+
+- Variabilele trebuiesc definite (la fel ca si constantele) inainte de a fi folosite.
+- ex de declarare a unei variabile 
+in Python
+rezultat = 'Nume'
+in Java: 
+String rezultat = "Name";
+
+- ex de declarare a unei constante 
+in Python
+REZULTAT = 'Nume'
+in Java: 
+String static final REZULTAT = "Name";
+
+rezultat = 'lasa-ma in pace' # este o variabila, valoare acestuia variaza
+REZULTAT = 'Nume'            # este o constanta, nu ar trebui sa ii schimbam valoare
+
+
+
+
+# Operatori:
+== Testeaza egalitatea intre doua variabile sau doua constante
+** putem testa egalitatea intre tipul de data a doua variabile **
+    numar = 4                       # Tipul variabilei este numeric
+    propozitie = 'O propozitie'     # Tipul acestei variabile este sir de caractere 'str'
+    type(numar) == type(propozitie) # se traduce in 'tip numeric' este egal cu 'tip sir de caractere'  
+
+    == il putem folosi ca sa determinam daca tipul de data al variabilelor este acelasi
+    == se va folosi in relatie cu functia 'type()' din python, care determina tipul unei variabile
+
+>  Mai mare, ne intrebam daca elementul din stanga este mai mare decat cel din dreapta
+>= Mai mare sau egal, ne intrebam daca elementul din stanga este mai mare sau egal cu cel din dreapta
+<  Mai mic, Similar cu mai mare
+<= Mai mic sau egal, similar cu mai mare sau egal
+
+
+
+
+# Ce este o conditie?
+# Este o comparatie intre variabile, sau o valoare de adevarat sau fals
+# In general orice conditie poate fii evaluata la valoarea adevarat sau fals.
+# ADICA, conditia poate fi implinita sau nu.
+
+Exemple de conditii: 
+2 > 3                               False          - in aceste exemplu '2 > 3' este conditia, iar valoarea conditiei este falsa
+'ceva' == 'altceva'                 False          - in acest exemplu, comparam doua constante inegale, deci valoarea va fi falsa
+input("Input tastatura") == 'salut' ?              - in acest exemplu insa, comparam o variabile (ce se citeste de la tastatura), nu putem stii cu siguranta valoarea conditiei
+
+numar = 4                           # Tipul variabilei este numeric
+propozitie = 'O propozitie'         # Tipul acestei variabile este sir de caractere 'str'
+type(numar) == type(propozitie)     False          - se traduce in 'tip numeric' este egal cu 'tip sir de caractere'  
+
+Conditiile trebuiesc evaluate de catre program pentru a stabili valoarea lor.
+
+
+
+
+# Structuri de control:
+
+Toate aceste structuri de control pot fi notate intr-un fel sau altul in functie
+de limbajul de programare.
+
+Structuri de control comune in Python, C#, Java, Javascript : while, for, if
+Structuri de control in Python : for, while , if, match
+
+Notatia poate diferi in sintaxa.
+Structurile de control altereaza cum functioneaza programul: 
+- ordinea de executie
+- repeta anumite parti din programare
+- realiza decizi logice
+
+** Pseudocodul este cod fals. Este o notatie in limba noastra, care ne permite
+sa intelegem mai bine algoritmul pe care il concepem (programul).
+
+
+
+
+
+# # Structura de control while / 'cat timp'
+
+# Definitie
+cat timp {CONDITIE} atunci
+    {INSTRUCTIUNE}
+
+# Exemplu Pseudocod
+cat timp Adevarat atunci
+    input_tastatura = citire_tastatura()
+    rezultat = 'lasa-ma in pace'
+
+# Exemplu Python
+while True:
+    input_tastatura = input("Write something:")
+    rezultat = 'lasa-ma in pace'
+
+
+
+
+
+# # Structura de control if/'daca'
+
+# Definitie
+daca {CONDITIE} atunci
+    {INSTRUCTIUNE}
+
+# Exemplu Pseudocod
+daca a + b == 12 atunci
+    a = 5 + 7
+
+# Exemplu Python
+if propozitie == 'ce faci':
+    print("Salut nu este egal cu ce faci, ceva este in neregula")
+
+
+
+
+
+# # Structura de control for/'pentru'
+
+# Folosita pentru tipuri de data sir (ex: sir de caractere: "Salut eu sunt un sir de caractere")
+# Dupa cum stim, in Python, un sir se declara astfel : 
+sir = []
+
+# Cand declaram un sir, putem sa il declaram gol, ca mai sus.
+# Sau putem sa il declaram cu elemente in el, ex mai jos.
+# # Intrebare Otilia: Spatiu dupa fiecare virgula?
+# # Este o buna practica, pentru a putea vedea mai bine
+
+# Declaratii de siruri
+sir_de_numere = [1, 3, 15, 10]
+sir_de_caractere = ['a', 'b', 'z', '↺', '\'', 'k']
+
+# Pentru a accesa un element al unui sir, vom folosi ordinea lui in sir
+# Altfel spus, indexul acestuia, altfel spus, al catelea este in sir 
+
+# Indexi         0  1   2   3            
+sir_de_numere = [1, 3, 15, 10]
+# 15 - este al treilea numar din sir, are indexul 2
+
+# Indexi             0
+sir_de_caractere = ['a', 'b', 'z', '↺', '\'', 'k']
+# k - are indexul 5
+
+# Pentru a accesa un element al unui sir, folosim indexi
+                 0  1   2   3 
+sir_de_numere = [1, 3, 15, 10]
+# 15 este reprezentat ca:  sir_de_numere[2]
+
+# Cod Python
+if sir_de_numere[2] == 15:
+    print("al treilea numar din sirul de caractere este 15")
+
+                     0    1    2    3     4    5
+sir_de_caractere = ['a', 'b', 'z', '↺', '\'', 'k']
+
+# Exercitiu:
+sir_de_caractere[2] = z
+sir_de_caractere[4] = '
+sir_de_caractere[9999] = O eroare la rularea codului
+
+# Erori 
+# Sunt de doua tipuri:
+# Erori de compilare, nu putem porni programul cu astfel de Erori
+# Erori de executie, programul poate fi pornit fara sa stim ca acest tip de erori exista
+#                    programul se va opri la astfel de erori
+
+
+# Definitie
+pentru {VALOARE_INITIALA, CONDITIE, INCREMENT} executa
+    {INSTRUCTIUNE}
+
+# Exemplu Pseudocod
+sir_de_caractere = ['a', 'b', 'z', '↺', '\'']
+pentru caracter = fiecare element din sir_de_caractere executa
+    afiseaza(caracter)
+
+# Exemplul Python
+sir_de_caractere = ['a', 'b', 'z', '↺', '\'']
+for caracter in sir_de_caractere:   # pentru fiecare caracter in sirul de caractere executa
+    print(caracter)                 # afiseaza caracterul
+
+
+
+# Practica 
+# Definim sirul lui Fibonacci : 
+- un sir de numere, 
+- unde fiecare numar este suma celor doua din urma,
+- primele doua numere din sir sunt 1, 1
+
+sirul_lui_fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...]
+
+# Exercitii:
+# Vrem un program care sa ne indice primele 100 de numere din sirul lui Fibonacci
+# Vrem un program care sa afiseze numerele din sirul lui Fibonacci divizibile cu 13, sa zicem primele 10 numere
+#    Un numar este divizibil cu altul, daca se imparte perfect la acestuia
+#    Exemple, 
+#            4 este divizibil cu 2, pentru ca 4 / 2 = 2
+#            5 nu este divizibil cu 2, pentru ca 5 / 2 = 2,5
+#            39 este divizibil cu 13, pentru ca 39 / 13 = 3
+
+
+
+# Problema 1
+# Vrem un program care sa ne indice primele 100 de numere din sirul lui Fibonacci
+
+
+# # # # Rezolvare
+
+# Practica 
+# Definim sirul lui Fibonacci : 
+# - un sir de numere, 
+# - unde fiecare numar este suma celor doua din urma,
+# - primele doua numere din sir sunt 1, 1
+
+# Notiuni noi : 
+# Putem afla oricand numarul de elemente dintr-un sir, apeland functia 'len()'
+# Bineinteles nu apela functia pur si simplu
+# II vom da ca parametru, variabila sirului nostru de caractere
+# Exemplu este : sir = [1, 2, 3, 4] 
+#                len(sir)           # care este 3
+
+# Vrem un program care sa ne indice primele 100 de numere din sirul lui Fibonacci
+sir = [1, 1]
+print(sir[0])
+print(sir[1])
+
+while len(sir) <= 100:
+    # Calculam noul element si declaram o variabile 'noul_element' care tine minte valoarea
+    ultimul_element = sir[-1]     # sir[-1] - acceseaza ultimul element din sir
+    penultimul_element = sir[-2]  # sir[-2] - acceseaza penultimul element din sir
+    noul_element = ultimul_element + penultimul_element # valoarea '2' intial
+
+    # Afisam noul element
+    print(noul_element)
+
+    # Punem noul element in sir, si marim numarul de elemente
+    sir.append(noul_element)                    # sir = [1, 1, 2, 3, 5, ...]

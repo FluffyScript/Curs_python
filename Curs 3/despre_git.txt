@@ -1,0 +1,24 @@
+Git 
+- in termeni tehnici, este un sistem de versionare
+- in limbja simplu, este un sistem software (un conglomerat de aplicatii), care permite programatorilor sa lucreze in acelasi proiect.
+
+Acesta faciliteaza schimbarea simultana a codului de mai multi programatori.
+Permite urcarea codului pe internet intr-un 'repository'.
+
+** Este ideal sa folosim Git impreuna cu o aplicatie grafica. 
+Git in sine este apelat in linie de comanda. 
+GitExtensions : https://gitextensions.github.io/
+
+#### Exemple de comenzi Git
+Pentru a initializa un repository local, deschide o linie de comanda si scriem : 
+'git init' -> va aparea folder-ul '.git' in locatia unde am chemat comanda
+
+Pentru a urca schaimbarile facute pe calculatorul local catre 'remote' (codul de pe server), apelam: 
+git remote add origin https://github.com/FluffyScript/Curs_python.git       # aceasta linie stabileste sursa de adevar pentru repository, sursa este pe contul meu de Github (FluffyScript)
+git branch -M main                                                          # aceasta linie spune sistemului cum se numeste versiunea pe care lucram ('main')
+git push -u origin main                                                     # aceasta linie trimite catre sursa de pe internet schimbarile facute pe versiunea 'main'
+
+** Inainte de a schimba codul sau de a programa, este necesar sa ne plasam pe o versiune (a doua comanda de mai sus).
+** Originea unui 'repository' poate oricand fii schimbata.
+** Un repository de pe internet poate fi public sau privat. Noi lucram pe un repository public, pentru ca este mai usor.
+   Vom invata intr-o lectie ulterioara cum sa configuram accesul la un repository privat. (foarte des folosit in companii, nu obtii un job de programator fara sa intelegi asta)
