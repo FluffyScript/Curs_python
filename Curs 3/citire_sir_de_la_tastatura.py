@@ -7,8 +7,6 @@ while numar_nou != 'x':
     sir.append(numar_nou)
     numar_nou = input('Introduceti urmatorul element:')
 
-# sortare de siruri
-
 # afisare
 print('Sirul citit este: ')
 for numar in sir:
